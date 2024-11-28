@@ -12,11 +12,13 @@ spring:
     show-sql: true
   application:
     name: HOTEL-SERVICE
-  eureka:
-    client:
-      fetchRegistry: true
-      registerWithEureka: true
-      serviceUrl:
-        defaultZone: http://localhost:8761/eureka/
-    instance:
-      preferIpAddress: true
+  config:
+    import: optional:configserver:http://localhost:8085
+#eureka:
+#    client:
+#      fetchRegistry: true
+#      registerWithEureka: true
+#      serviceUrl:
+#        defaultZone: http://localhost:8761/eureka/
+#    instance:
+#      preferIpAddress: true
